@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска мемов</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Доска мемов</h1>
+        <p class="subtitle">Коллекция лучших мемов группы</p>
+    </header>
+
+    <main>
+        <section class="add-form">
+            <h2>Добавить мем</h2>
+            <div class="form-row">
+                <input type="text" id="inputTitle" placeholder="Название мема">
+                <select id="inputCategory">
+                    <option value="программирование">Программирование</option>
+                    <option value="учёба">Учёба</option>
+                    <option value="жизнь">Жизнь</option>
+                </select>
+                <select id="inputRating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
+                </select>
+                <button id="btnAdd">Добавить</button>
+            </div>
+            <p class="error-message" id="errorMessage"></p>
+        </section>
+
+        <p class="count-text" id="memesCount"></p>
+        <p class="loading-text" id="loadingText">Загружаем мемы...</p>
+        <section class="memes-grid" id="memesGrid"></section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
